@@ -1,12 +1,12 @@
-# VSCode-TortiesHg-Commands
+# VSCode-TortoiseHg-Commands
 
 ## Overview
 
-This extension has shortcuts to be able to run some TortiesHG command for mercurial repos.
+This extension has shortcuts to be able to run some TortoiseHg command for mercurial repos.
 
 # Prerequisites
 
-TortiesHG must be installed in your local and thg.exe must be in your path.
+TortoiseHg must be installed in your local and thg.exe must be in your path.
 
 ![Hg](images/editor-context-menu.png) 
 

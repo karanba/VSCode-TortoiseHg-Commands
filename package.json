@@ -1,7 +1,7 @@
 {
-	"name": "vscode-tortieshg-commands",
-	"displayName": "VS Code TortiesHg Commands",
-	"description": "VS Code extension for calling TortiesHg commands",
+	"name": "vscode-tortoisehg-commands",
+	"displayName": "VS Code Tortoisehg Commands",
+	"description": "VS Code extension for calling Tortoisehg commands",
 	"version": "1.0.0",
 	"publisher": "karanba",
 	"repository": {
