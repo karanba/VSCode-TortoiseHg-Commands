@@ -1,0 +1,122 @@
+{
+	"name": "vscode-tortieshg-commands",
+	"displayName": "VS Code TortiesHg Commands",
+	"description": "VS Code extension for calling TortiesHg commands",
+	"version": "1.0.0",
+	"publisher": "karanba",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/karanba/VSCode-TortiesHg-Commands.git"
+	},
+	"bugs": {
+		"url": "https://github.com/karanba/VSCode-TortiesHg-Commands/issues"
+	},
+	"homepage": "https://github.com/karanba/VSCode-TortiesHg-Commands/blob/master/README.md",
+	"icon": "images/logo.png",
+	"galleryBanner": {
+		"color": "#96DFFF",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"keywords": [
+		"hg",
+		"mercurial",
+		"source",
+		"tortoise",
+		"scm"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.revisionHistory",
+		"onCommand:extension.annotateFile"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": [
+			{
+				"type": "object",
+				"title": "VS Code TortiesHg Commands",
+				"properties": {}
+			}
+		],
+		"commands": [
+			{
+				"command": "extension.revisionHistory",
+				"title": "Revision History - THG",
+				"category": "thg"
+			},
+			{
+				"command": "extension.annotateFile",
+				"title": "Annotate File - THG",
+				"category": "thg"
+			}
+		],
+		"menus": {
+			"explorer/context":  [
+				{
+					"when": "",
+					"command": "extension.revisionHistory",
+					"group": "thg"
+				},
+				{
+					"when": "",
+					"command": "extension.annotateFile",
+					"group": "thg"
+				}
+			],
+			"editor/title/context": [
+				{
+					"when": "",
+					"command": "extension.revisionHistory",
+					"group": "thg"
+				},
+				{
+					"when": "",
+					"command": "extension.annotateFile",
+					"group": "thg"
+				}
+			],
+			"editor/context": [
+				{
+					"when": "",
+					"command": "extension.revisionHistory",
+					"group": "thg"
+				},
+				{
+					"when": "",
+					"command": "extension.annotateFile",
+					"group": "thg"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "extension.revisionHistory",
+				"key": "shift+ctrl+h",
+				"mac": "shift+cmd+h",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.annotateFile",
+				"key": "shift+ctrl+f",
+				"mac": "shift+cmd+f",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
