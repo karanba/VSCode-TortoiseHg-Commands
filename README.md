@@ -18,5 +18,5 @@ Following commands are avalible in explorer/context, editor/context and editor/t
 
 # Feedback & Contributing
 
- * Please report any bugs, suggestions or documentation requests via the [Github issues](https://github.com/karanba/VSCode-TortiesHg-Commands/issues).
- * Feel free to submit [pull requests](https://github.com/karanba/VSCode-TortiesHg-Commands/pulls).
+ * Please report any bugs, suggestions or documentation requests via the [Github issues](https://github.com/karanba/VSCode-TortoiseHg-Commands/issues).
+ * Feel free to submit [pull requests](https://github.com/karanba/VSCode-TortoiseHg-Commands/pulls).

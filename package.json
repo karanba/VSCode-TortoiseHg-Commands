@@ -1,17 +1,17 @@
 {
 	"name": "vscode-tortoisehg-commands",
 	"displayName": "VS Code Tortoisehg Commands",
-	"description": "VS Code extension for calling Tortoisehg commands",
+	"description": "VS Code extension for calling TortoiseHg commands",
 	"version": "1.0.0",
 	"publisher": "karanba",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/karanba/VSCode-TortiesHg-Commands.git"
+		"url": "https://github.com/karanba/VSCode-TortoiseHg-Commands.git"
 	},
 	"bugs": {
-		"url": "https://github.com/karanba/VSCode-TortiesHg-Commands/issues"
+		"url": "https://github.com/karanba/VSCode-TortoiseHg-Commands/issues"
 	},
-	"homepage": "https://github.com/karanba/VSCode-TortiesHg-Commands/blob/master/README.md",
+	"homepage": "https://github.com/karanba/VSCode-TortoiseHg-Commands/blob/master/README.md",
 	"icon": "images/logo.png",
 	"galleryBanner": {
 		"color": "#96DFFF",
@@ -39,7 +39,7 @@
 		"configuration": [
 			{
 				"type": "object",
-				"title": "VS Code TortiesHg Commands",
+				"title": "VS Code TortoiseHg Commands",
 				"properties": {}
 			}
 		],
