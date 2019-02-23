@@ -1,7 +1,7 @@
 # VSCode-TortoiseHg-Commands
 
 
-[![](https://vsmarketplacebadge.apphb.com/version-short/karanba.vscode-tortoisehg-commands.svg)](https://marketplace.visualstudio.com/items?itemName=karanba.vscode-tortoisehg-commands) [![GitHub](https://img.shields.io/github/license/karanba/VSCode-TortoiseHg-Commands.svg)](https://raw.githubusercontent.com/karanba/VSCode-TortoiseHg-Commands/master/LICENSE) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/karanba/VSCode-TortoiseHg-Commands.svg)
+[![](https://vsmarketplacebadge.apphb.com/version-short/karanba.vscode-tortoisehg-commands.svg)](https://marketplace.visualstudio.com/items?itemName=karanba.vscode-tortoisehg-commands) [![GitHub](https://img.shields.io/github/license/karanba/VSCode-TortoiseHg-Commands.svg)](https://raw.githubusercontent.com/karanba/VSCode-TortoiseHg-Commands/master/LICENSE) [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/karanba/VSCode-TortoiseHg-Commands.svg)](https://github.com/karanba/VSCode-TortoiseHg-Commands)
 
 ## Overview
 
