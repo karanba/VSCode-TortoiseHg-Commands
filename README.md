@@ -1,5 +1,8 @@
 # VSCode-TortoiseHg-Commands
 
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg?maxAge=2592000)](https://raw.githubusercontent.com/apollographql/apollo-tooling/master/LICENSE) ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/karanba.vscode-tortoisehg-commands.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/karanba/VSCode-TortoiseHg-Commands.svg)
+
 ## Overview
 
 This extension has shortcuts to be able to run some TortoiseHg command for mercurial repos.
