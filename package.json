@@ -2,7 +2,7 @@
 	"name": "vscode-tortoisehg-commands",
 	"displayName": "VS Code Tortoisehg Commands",
 	"description": "VS Code extension for calling TortoiseHg commands",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"publisher": "karanba",
 	"repository": {
 		"type": "git",
@@ -25,6 +25,7 @@
 		"mercurial",
 		"source",
 		"tortoise",
+		"tortoisehg",
 		"scm"
 	],
 	"categories": [
