@@ -15,7 +15,8 @@ const runCommand = (uri, command) => {
 	if (fileFullPath) {
 		var activeTerminal = vscode.window.activeTerminal;
 		if (activeTerminal) {
-			activeTerminal.sendText(command + " " + fileFullPath);
+			command = command.replace("${fileFullPath}", fileFullPath);
+			activeTerminal.sendText(command);
 		} else {
 			vscode.window.showInformationMessage("To be able to run command, there must be an active terminal!");
 		}
@@ -36,18 +37,33 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 
-	let revisionHistoryDisposable = vscode.commands.registerCommand('extension.revisionHistory', (uri) => {
+	let workbenchDisposable = vscode.commands.registerCommand('extension.workbench', (uri) => {
+		runCommand(uri, "thg log");
+	});
 
-		runCommand(uri, "thg file");
+	context.subscriptions.push(workbenchDisposable);
+
+
+	let revisionHistoryDisposable = vscode.commands.registerCommand('extension.revisionHistory', (uri) => {
+		runCommand(uri, "thg file ${fileFullPath}");
 	});
 
 	context.subscriptions.push(revisionHistoryDisposable);
 
+
+	let revisionHistoryCompareDisposable = vscode.commands.registerCommand('extension.revisionHistoryCompare', (uri) => {
+		runCommand(uri, "thg file ${fileFullPath} --compare");
+	});
+
+	context.subscriptions.push(revisionHistoryCompareDisposable);
+
+
 	let annotateFileDisposable = vscode.commands.registerCommand('extension.annotateFile', (uri) => {
-		runCommand(uri, "thg annotate");
+		runCommand(uri, "thg annotate ${fileFullPath}");
 	});
 
 	context.subscriptions.push(annotateFileDisposable);
+
 }
 
 

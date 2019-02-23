@@ -2,7 +2,7 @@
 	"name": "vscode-tortoisehg-commands",
 	"displayName": "VS Code Tortoisehg Commands",
 	"description": "VS Code extension for calling TortoiseHg commands",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "karanba",
 	"repository": {
 		"type": "git",
@@ -31,7 +31,9 @@
 		"Other"
 	],
 	"activationEvents": [
+		"onCommand:extension.workbench",
 		"onCommand:extension.revisionHistory",
+		"onCommand:extension.revisionHistoryCompare",
 		"onCommand:extension.annotateFile"
 	],
 	"main": "./extension.js",
@@ -45,8 +47,18 @@
 		],
 		"commands": [
 			{
+				"command": "extension.workbench",
+				"title": "Open Workbench - THG",
+				"category": "thg"
+			},
+			{
 				"command": "extension.revisionHistory",
 				"title": "Revision History - THG",
+				"category": "thg"
+			},
+			{
+				"command": "extension.revisionHistoryCompare",
+				"title": "Compare revisions side-by-side - THG",
 				"category": "thg"
 			},
 			{
@@ -58,12 +70,22 @@
 		"menus": {
 			"explorer/context":  [
 				{
-					"when": "",
+					"when": "explorerResourceIsFolder",
+					"command": "extension.workbench",
+					"group": "thg"
+				},
+				{
+					"when": "!explorerResourceIsFolder",
 					"command": "extension.revisionHistory",
 					"group": "thg"
 				},
 				{
-					"when": "",
+					"when": "!explorerResourceIsFolder",
+					"command": "extension.revisionHistoryCompare",
+					"group": "thg"
+				},
+				{
+					"when": "!explorerResourceIsFolder",
 					"command": "extension.annotateFile",
 					"group": "thg"
 				}
@@ -72,6 +94,11 @@
 				{
 					"when": "",
 					"command": "extension.revisionHistory",
+					"group": "thg"
+				},
+				{
+					"when": "",
+					"command": "extension.revisionHistoryCompare",
 					"group": "thg"
 				},
 				{
@@ -88,6 +115,11 @@
 				},
 				{
 					"when": "",
+					"command": "extension.revisionHistoryCompare",
+					"group": "thg"
+				},
+				{
+					"when": "",
 					"command": "extension.annotateFile",
 					"group": "thg"
 				}
@@ -95,9 +127,21 @@
 		},
 		"keybindings": [
 			{
+				"command": "extension.workbench",
+				"key": "shift+ctrl+w",
+				"mac": "shift+cmd+w",
+				"when": ""
+			},
+			{
 				"command": "extension.revisionHistory",
 				"key": "shift+ctrl+h",
 				"mac": "shift+cmd+h",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.revisionHistoryCompare",
+				"key": "shift+ctrl+s",
+				"mac": "shift+cmd+s",
 				"when": "editorTextFocus"
 			},
 			{

@@ -13,8 +13,10 @@ TortoiseHg must be installed in your local and thg.exe must be in your path.
 # Features
 Following commands are avalible in explorer/context, editor/context and editor/title/context menus.
  
-* Annotate File Command
-* Revision History Command
+* Open workbench 
+* Annotate file 
+* Show revision history
+* Compare revisions side-bye-side
 
 # Feedback & Contributing
 
