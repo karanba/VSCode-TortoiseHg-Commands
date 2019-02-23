@@ -1,167 +1,167 @@
 {
-	"name": "vscode-tortoisehg-commands",
-	"displayName": "VS Code Tortoisehg Commands",
-	"description": "VS Code extension for calling TortoiseHg commands",
-	"version": "1.1.4",
-	"publisher": "karanba",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/karanba/VSCode-TortoiseHg-Commands.git"
-	},
-	"bugs": {
-		"url": "https://github.com/karanba/VSCode-TortoiseHg-Commands/issues"
-	},
-	"homepage": "https://github.com/karanba/VSCode-TortoiseHg-Commands/blob/master/README.md",
-	"icon": "images/logo.png",
-	"galleryBanner": {
-		"color": "#96DFFF",
-		"theme": "light"
-	},
-	"engines": {
-		"vscode": "^1.31.0"
-	},
-	"keywords": [
-		"hg",
-		"mercurial",
-		"source",
-		"tortoise",
-		"tortoisehg",
-		"scm"
-	],
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.workbench",
-		"onCommand:extension.revisionHistory",
-		"onCommand:extension.revisionHistoryCompare",
-		"onCommand:extension.annotateFile"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"configuration": [
-			{
-				"type": "object",
-				"title": "VS Code TortoiseHg Commands",
-				"properties": {}
-			}
-		],
-		"commands": [
-			{
-				"command": "extension.workbench",
-				"title": "Open Workbench - THG",
-				"category": "thg"
-			},
-			{
-				"command": "extension.revisionHistory",
-				"title": "Revision History - THG",
-				"category": "thg"
-			},
-			{
-				"command": "extension.revisionHistoryCompare",
-				"title": "Compare revisions side-by-side - THG",
-				"category": "thg"
-			},
-			{
-				"command": "extension.annotateFile",
-				"title": "Annotate File - THG",
-				"category": "thg"
-			}
-		],
-		"menus": {
-			"explorer/context":  [
-				{
-					"when": "explorerResourceIsFolder",
-					"command": "extension.workbench",
-					"group": "thg"
-				},
-				{
-					"when": "!explorerResourceIsFolder",
-					"command": "extension.revisionHistory",
-					"group": "thg"
-				},
-				{
-					"when": "!explorerResourceIsFolder",
-					"command": "extension.revisionHistoryCompare",
-					"group": "thg"
-				},
-				{
-					"when": "!explorerResourceIsFolder",
-					"command": "extension.annotateFile",
-					"group": "thg"
-				}
-			],
-			"editor/title/context": [
-				{
-					"when": "",
-					"command": "extension.revisionHistory",
-					"group": "thg"
-				},
-				{
-					"when": "",
-					"command": "extension.revisionHistoryCompare",
-					"group": "thg"
-				},
-				{
-					"when": "",
-					"command": "extension.annotateFile",
-					"group": "thg"
-				}
-			],
-			"editor/context": [
-				{
-					"when": "",
-					"command": "extension.revisionHistory",
-					"group": "thg"
-				},
-				{
-					"when": "",
-					"command": "extension.revisionHistoryCompare",
-					"group": "thg"
-				},
-				{
-					"when": "",
-					"command": "extension.annotateFile",
-					"group": "thg"
-				}
-			]
-		},
-		"keybindings": [
-			{
-				"command": "extension.workbench",
-				"key": "shift+ctrl+w",
-				"mac": "shift+cmd+w",
-				"when": ""
-			},
-			{
-				"command": "extension.revisionHistory",
-				"key": "shift+ctrl+h",
-				"mac": "shift+cmd+h",
-				"when": "editorTextFocus"
-			},
-			{
-				"command": "extension.revisionHistoryCompare",
-				"key": "shift+ctrl+s",
-				"mac": "shift+cmd+s",
-				"when": "editorTextFocus"
-			},
-			{
-				"command": "extension.annotateFile",
-				"key": "shift+ctrl+f",
-				"mac": "shift+cmd+f",
-				"when": "editorTextFocus"
-			}
-		]
-	},
-	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"eslint": "^5.13.0",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
-	}
+  "name": "vscode-tortoisehg-commands",
+  "displayName": "VS Code Tortoisehg Commands",
+  "description": "VS Code extension for calling TortoiseHg commands",
+  "version": "1.2.0",
+  "publisher": "karanba",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karanba/VSCode-TortoiseHg-Commands.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karanba/VSCode-TortoiseHg-Commands/issues"
+  },
+  "homepage": "https://github.com/karanba/VSCode-TortoiseHg-Commands/blob/master/README.md",
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#96DFFF",
+    "theme": "light"
+  },
+  "engines": {
+    "vscode": "^1.31.0"
+  },
+  "keywords": [
+    "hg",
+    "mercurial",
+    "source",
+    "tortoise",
+    "tortoisehg",
+    "scm"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.workbench",
+    "onCommand:extension.revisionHistory",
+    "onCommand:extension.revisionHistoryCompare",
+    "onCommand:extension.annotateFile"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": [
+      {
+        "type": "object",
+        "title": "VS Code TortoiseHg Commands",
+        "properties": {}
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.workbench",
+        "title": "Open Workbench - THG",
+        "category": "thg"
+      },
+      {
+        "command": "extension.revisionHistory",
+        "title": "Revision History - THG",
+        "category": "thg"
+      },
+      {
+        "command": "extension.revisionHistoryCompare",
+        "title": "Compare revisions side-by-side - THG",
+        "category": "thg"
+      },
+      {
+        "command": "extension.annotateFile",
+        "title": "Annotate File - THG",
+        "category": "thg"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "extension.workbench",
+          "group": "thg"
+        },
+        {
+          "when": "!explorerResourceIsFolder",
+          "command": "extension.revisionHistory",
+          "group": "thg"
+        },
+        {
+          "when": "!explorerResourceIsFolder",
+          "command": "extension.revisionHistoryCompare",
+          "group": "thg"
+        },
+        {
+          "when": "!explorerResourceIsFolder",
+          "command": "extension.annotateFile",
+          "group": "thg"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "when": "",
+          "command": "extension.revisionHistory",
+          "group": "thg"
+        },
+        {
+          "when": "",
+          "command": "extension.revisionHistoryCompare",
+          "group": "thg"
+        },
+        {
+          "when": "",
+          "command": "extension.annotateFile",
+          "group": "thg"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "",
+          "command": "extension.revisionHistory",
+          "group": "thg"
+        },
+        {
+          "when": "",
+          "command": "extension.revisionHistoryCompare",
+          "group": "thg"
+        },
+        {
+          "when": "",
+          "command": "extension.annotateFile",
+          "group": "thg"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "extension.workbench",
+        "key": "shift+ctrl+w",
+        "mac": "shift+cmd+w",
+        "when": ""
+      },
+      {
+        "command": "extension.revisionHistory",
+        "key": "shift+ctrl+h",
+        "mac": "shift+cmd+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.revisionHistoryCompare",
+        "key": "shift+ctrl+s",
+        "mac": "shift+cmd+s",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.annotateFile",
+        "key": "shift+ctrl+f",
+        "mac": "shift+cmd+f",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "eslint": "^5.13.0",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  }
 }
