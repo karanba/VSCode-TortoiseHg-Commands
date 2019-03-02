@@ -1,9 +1,11 @@
 {
   "name": "vscode-tortoisehg-commands",
-  "displayName": "VS Code Tortoisehg Commands",
-  "description": "VS Code extension for calling TortoiseHg commands",
+  "displayName": "Tortoisehg Commands",
+  "description": "Extension for calling TortoiseHg commands",
   "version": "1.3.0",
   "publisher": "karanba",
+  "author": "Altay Karakuş",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/karanba/VSCode-TortoiseHg-Commands.git"
@@ -32,10 +34,10 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.workbench",
-    "onCommand:extension.revisionHistory",
-    "onCommand:extension.revisionHistoryCompare",
-    "onCommand:extension.annotateFile"
+    "onCommand:thg.workbench",
+    "onCommand:thg.revisionHistory",
+    "onCommand:thg.revisionHistoryCompare",
+    "onCommand:thg.annotateFile"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -48,22 +50,22 @@
     ],
     "commands": [
       {
-        "command": "extension.workbench",
+        "command": "thg.workbench",
         "title": "Open Workbench - THG",
         "category": "thg"
       },
       {
-        "command": "extension.revisionHistory",
+        "command": "thg.revisionHistory",
         "title": "Revision History - THG",
         "category": "thg"
       },
       {
-        "command": "extension.revisionHistoryCompare",
+        "command": "thg.revisionHistoryCompare",
         "title": "Compare revisions side-by-side - THG",
         "category": "thg"
       },
       {
-        "command": "extension.annotateFile",
+        "command": "thg.annotateFile",
         "title": "Annotate File - THG",
         "category": "thg"
       }
@@ -72,81 +74,81 @@
       "explorer/context": [
         {
           "when": "explorerResourceIsFolder",
-          "command": "extension.workbench",
+          "command": "thg.workbench",
           "group": "thg"
         },
         {
           "when": "!explorerResourceIsFolder",
-          "command": "extension.revisionHistory",
+          "command": "thg.revisionHistory",
           "group": "thg"
         },
         {
           "when": "!explorerResourceIsFolder",
-          "command": "extension.revisionHistoryCompare",
+          "command": "thg.revisionHistoryCompare",
           "group": "thg"
         },
         {
           "when": "!explorerResourceIsFolder",
-          "command": "extension.annotateFile",
+          "command": "thg.annotateFile",
           "group": "thg"
         }
       ],
       "editor/title/context": [
         {
           "when": "",
-          "command": "extension.revisionHistory",
+          "command": "thg.revisionHistory",
           "group": "thg"
         },
         {
           "when": "",
-          "command": "extension.revisionHistoryCompare",
+          "command": "thg.revisionHistoryCompare",
           "group": "thg"
         },
         {
           "when": "",
-          "command": "extension.annotateFile",
+          "command": "thg.annotateFile",
           "group": "thg"
         }
       ],
       "editor/context": [
         {
           "when": "",
-          "command": "extension.revisionHistory",
+          "command": "thg.revisionHistory",
           "group": "thg"
         },
         {
           "when": "",
-          "command": "extension.revisionHistoryCompare",
+          "command": "thg.revisionHistoryCompare",
           "group": "thg"
         },
         {
           "when": "",
-          "command": "extension.annotateFile",
+          "command": "thg.annotateFile",
           "group": "thg"
         }
       ]
     },
     "keybindings": [
       {
-        "command": "extension.workbench",
+        "command": "thg.workbench",
         "key": "shift+ctrl+w",
         "mac": "shift+cmd+w",
         "when": ""
       },
       {
-        "command": "extension.revisionHistory",
+        "command": "thg.revisionHistory",
         "key": "shift+ctrl+h",
         "mac": "shift+cmd+h",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.revisionHistoryCompare",
+        "command": "thg.revisionHistoryCompare",
         "key": "shift+ctrl+s",
         "mac": "shift+cmd+s",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.annotateFile",
+        "command": "thg.annotateFile",
         "key": "shift+ctrl+f",
         "mac": "shift+cmd+f",
         "when": "editorTextFocus"

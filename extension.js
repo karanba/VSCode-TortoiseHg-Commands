@@ -43,28 +43,28 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 
-	let workbenchDisposable = vscode.commands.registerCommand('extension.workbench', (uri) => {
+	let workbenchDisposable = vscode.commands.registerCommand('thg.workbench', (uri) => {
 		runCommand(uri, "thg log");
 	});
 
 	context.subscriptions.push(workbenchDisposable);
 
 
-	let revisionHistoryDisposable = vscode.commands.registerCommand('extension.revisionHistory', (uri) => {
+	let revisionHistoryDisposable = vscode.commands.registerCommand('thg.revisionHistory', (uri) => {
 		runCommand(uri, "thg file ${fileFullPath}");
 	});
 
 	context.subscriptions.push(revisionHistoryDisposable);
 
 
-	let revisionHistoryCompareDisposable = vscode.commands.registerCommand('extension.revisionHistoryCompare', (uri) => {
+	let revisionHistoryCompareDisposable = vscode.commands.registerCommand('thg.revisionHistoryCompare', (uri) => {
 		runCommand(uri, "thg file ${fileFullPath} --compare");
 	});
 
 	context.subscriptions.push(revisionHistoryCompareDisposable);
 
 
-	let annotateFileDisposable = vscode.commands.registerCommand('extension.annotateFile', (uri) => {
+	let annotateFileDisposable = vscode.commands.registerCommand('thg.annotateFile', (uri) => {
 		runCommand(uri, "thg annotate ${fileFullPath}");
 	});
 

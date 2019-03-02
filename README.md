@@ -1,11 +1,17 @@
-# VSCode-TortoiseHg-Commands
+# VSCode TortoiseHg Commands
 
 
-[![](https://vsmarketplacebadge.apphb.com/version-short/karanba.vscode-tortoisehg-commands.svg)](https://marketplace.visualstudio.com/items?itemName=karanba.vscode-tortoisehg-commands) [![GitHub](https://img.shields.io/github/license/karanba/VSCode-TortoiseHg-Commands.svg)](https://raw.githubusercontent.com/karanba/VSCode-TortoiseHg-Commands/master/LICENSE) [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/karanba/VSCode-TortoiseHg-Commands.svg)](https://github.com/karanba/VSCode-TortoiseHg-Commands)
+[![](https://vsmarketplacebadge.apphb.com/version-short/karanba.vscode-tortoisehg-commands.svg)](https://marketplace.visualstudio.com/items?itemName=karanba.vscode-tortoisehg-commands) [![GitHub](https://img.shields.io/github/license/karanba/VSCode-TortoiseHg-Commands.svg)](https://raw.githubusercontent.com/karanba/VSCode-TortoiseHg-Commands/master/LICENSE) [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/karanba/VSCode-TortoiseHg-Commands.svg)](https://github.com/karanba/VSCode-TortoiseHg-Commands) [![GitHub](https://img.shields.io/github/issues/karanba/VSCode-TortoiseHg-Commands.svg?style=flat-square)](https://github.com/karanba/VSCode-TortoiseHg-Commands/issues) 
 
 ## Overview
 
 This extension has shortcuts to be able to run some TortoiseHg command for mercurial repos.
+
+## Installation
+
+```
+ext install karanba.vscode-tortoisehg-commands
+```
 
 # Prerequisites
 
@@ -20,6 +26,10 @@ Following commands are avalible in explorer/context, editor/context and editor/t
 * Annotate file 
 * Show revision history
 * Compare revisions side-bye-side
+
+## Available Commands
+* thg: Annotate File - THG
+* thg: Revision History - THG
 
 # Feedback & Contributing
 
