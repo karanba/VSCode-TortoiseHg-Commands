@@ -1,7 +1,14 @@
 'use strict';
 const vscode = require('vscode');
 
+const getTerminal = () => {
+	var activeTerminal = vscode.window.activeTerminal;
+	if (activeTerminal) {
+		return activeTerminal;
+	}
 
+	return vscode.window.createTerminal('thg');
+}
 const runCommand = (uri, command) => {
 	let fileFullPath = undefined;
 
@@ -11,14 +18,13 @@ const runCommand = (uri, command) => {
 		fileFullPath = vscode.window.activeTextEditor.document.uri.fsPath;
 	}
 
-
 	if (fileFullPath) {
-		var activeTerminal = vscode.window.activeTerminal;
+		var activeTerminal = getTerminal();
 		if (activeTerminal) {
 			command = command.replace("${fileFullPath}", fileFullPath);
 			activeTerminal.sendText(command);
 		} else {
-			vscode.window.showInformationMessage("To be able to run command, there must be an active terminal!");
+			vscode.window.showInformationMessage("Could not get active terminal");
 		}
 	} else {
 		vscode.window.showInformationMessage("Could not locate file");
