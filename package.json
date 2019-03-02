@@ -2,7 +2,7 @@
   "name": "vscode-tortoisehg-commands",
   "displayName": "Tortoisehg Commands",
   "description": "Extension for calling TortoiseHg commands",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "publisher": "karanba",
   "author": "Altay Karakuş",
   "license": "MIT",
@@ -131,26 +131,26 @@
     "keybindings": [
       {
         "command": "thg.workbench",
-        "key": "shift+ctrl+w",
-        "mac": "shift+cmd+w",
+        "key": "ctrl+alt+w",
+        "mac": "cmd+alt+w",
         "when": ""
       },
       {
         "command": "thg.revisionHistory",
-        "key": "shift+ctrl+h",
-        "mac": "shift+cmd+h",
+        "key": "ctrl+alt+h",
+        "mac": "cmd+alt+h",
         "when": "editorTextFocus"
       },
       {
         "command": "thg.revisionHistoryCompare",
-        "key": "shift+ctrl+s",
-        "mac": "shift+cmd+s",
+        "key": "ctrl+alt+s",
+        "mac": "cmd+alt+s",
         "when": "editorTextFocus"
       },
       {
         "command": "thg.annotateFile",
-        "key": "shift+ctrl+f",
-        "mac": "shift+cmd+f",
+        "key": "ctrl+alt+f",
+        "mac": "cmd+alt+f",
         "when": "editorTextFocus"
       }
     ]
