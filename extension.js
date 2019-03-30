@@ -2,7 +2,7 @@
 const vscode = require('vscode');
 
 const getTerminal = () => {
-	var activeTerminal = vscode.window.activeTerminal;
+	var activeTerminal = vscode.window.terminals.find(x => x.name === 'thg');
 	if (activeTerminal) {
 		return activeTerminal;
 	}
@@ -51,21 +51,21 @@ function activate(context) {
 
 
 	let revisionHistoryDisposable = vscode.commands.registerCommand('thg.revisionHistory', (uri) => {
-		runCommand(uri, "thg file ${fileFullPath}");
+		runCommand(uri, "thg file '${fileFullPath}'");
 	});
 
 	context.subscriptions.push(revisionHistoryDisposable);
 
 
 	let revisionHistoryCompareDisposable = vscode.commands.registerCommand('thg.revisionHistoryCompare', (uri) => {
-		runCommand(uri, "thg file ${fileFullPath} --compare");
+		runCommand(uri, "thg file '${fileFullPath}' --compare");
 	});
 
 	context.subscriptions.push(revisionHistoryCompareDisposable);
 
 
 	let annotateFileDisposable = vscode.commands.registerCommand('thg.annotateFile', (uri) => {
-		runCommand(uri, "thg annotate ${fileFullPath}");
+		runCommand(uri, "thg annotate '${fileFullPath}'");
 	});
 
 	context.subscriptions.push(annotateFileDisposable);
